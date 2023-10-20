@@ -15,11 +15,7 @@ void printSolution(int board[N][N])
 }
  
 // A utility function to check if a queen can
-// be placed on board[row][col]. Note that this
-// function is called when "col" queens are
-// already placed in columns from 0 to col -1.
-// So we need to check only left side for
-// attacking queens
+// be placed on board[row][col]. 
 bool isSafe(int board[N][N], int row, int col)
 {
     int i, j;
@@ -79,13 +75,8 @@ bool solveNQUtil(int board[N][N], int col)
 }
  
 // This function solves the N Queen problem using
-// Backtracking. It mainly uses solveNQUtil() to
-// solve the problem. It returns false if queens
-// cannot be placed, otherwise, return true and
-// prints placement of queens in the form of 1s.
-// Please note that there may be more than one
-// solutions, this function prints one  of the
-// feasible solutions.
+// Backtracking.
+
 bool solveNQ()
 {
     int board[N][N] = { { 0, 0, 0, 0 },
